@@ -1,0 +1,141 @@
+:root{
+  --bg:#f4f7fb;
+  --primary:#0b3d91;
+  --accent:#ff6f61;
+  --muted:#6b7280;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:#0b1220;overflow-x:hidden}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;color:#fff;box-shadow:0 8px 30px rgba(11,61,145,0.12);background-color:var(--primary)}
+/* header background image (uses site images in project root) */
+.site-header{
+  background-image:linear-gradient(90deg, rgba(11,61,145,0.92), rgba(23,72,179,0.6)), url('../web 5.png');
+  background-size:cover;background-position:center;
+}
+.logo{font-weight:700;font-size:1.2rem}
+
+/* Topnav (based on w3schools topnav pattern) */
+.topnav{display:flex;gap:8px}
+.topnav a{display:block;color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;transition:transform .18s ease,background .18s ease}
+.topnav a:hover{background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+.topnav a.active{background:rgba(255,255,255,0.12);font-weight:600}
+.topnav .icon{display:none}
+
+@media screen and (max-width:760px){
+  .topnav a:not(:first-child){display:none}
+  .topnav a.icon{display:block}
+  .topnav.responsive{position:relative}
+  .topnav.responsive a{display:block;text-align:left}
+}
+
+.container{max-width:1100px;margin:20px auto;padding:16px}
+.hero{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center}
+.hero-figure{position:relative;overflow:hidden;border-radius:12px;box-shadow:0 18px 40px rgba(11,61,145,0.08)}
+.hero-figure img{width:100%;height:auto;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.9,.2,1);aspect-ratio:16/9}
+.hero-figure:hover img{transform:scale(1.05) rotate(-0.6deg)}
+.hero-caption{position:absolute;left:16px;bottom:16px;background:linear-gradient(90deg, rgba(11,61,145,0.85), rgba(11,61,145,0.65));color:#fff;padding:8px 12px;border-radius:8px;font-weight:600;z-index:6;max-width:80%}
+.hero-content h1{margin:0 0 8px;color:var(--primary);font-size:2rem}
+.lead{color:var(--muted);margin-bottom:10px}
+.cta{background:var(--accent);color:#fff;padding:10px 14px;border:none;border-radius:6px;text-decoration:none;box-shadow:0 8px 20px rgba(255,111,97,0.18)}
+
+.features{display:flex;gap:18px;margin-top:20px}
+.features article{background:var(--card);padding:16px;border-radius:8px;flex:1;box-shadow:0 6px 18px rgba(11,61,145,0.06);transition:transform .24s ease,box-shadow .24s ease}
+.features article:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,61,145,0.06)}
+
+/* Feature card image variants (use images from project root) */
+.features article.feat-1{background-image:linear-gradient(180deg, rgba(11,61,145,0.9), rgba(11,61,145,0.6)), url('../web 3.jpeg');background-size:cover;color:#fff}
+.features article.feat-2{background-image:linear-gradient(180deg, rgba(23,72,179,0.9), rgba(23,72,179,0.5)), url('../web 4.jpeg');background-size:cover;color:#fff}
+.features article.feat-3{background-image:linear-gradient(180deg, rgba(11,61,145,0.9), rgba(11,61,145,0.5)), url('../web 6.png');background-size:cover;color:#fff}
+
+.features article h2, .features article p{color:#fff}
+
+.promo{background:linear-gradient(180deg,#fff, #f7fbff);padding:14px;border-radius:8px;margin:18px;max-width:240px;box-shadow:0 12px 30px rgba(11,61,145,0.06);flex:0 0 auto}
+
+.site-footer{background:#0b1220;color:#fff;padding:18px;text-align:center;margin-top:30px}
+
+.courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.courses-grid article{background:var(--card);padding:12px;border-radius:8px;transition:transform .24s ease,box-shadow .24s ease}
+.courses-grid article:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,61,145,0.06)}
+
+/* Table styles */
+.schedule{width:100%;border-collapse:collapse;background:var(--card);border-radius:6px;overflow:hidden}
+.schedule th,.schedule td{padding:10px;border-bottom:1px solid #eef2f7;text-align:left}
+.schedule thead th{background:#f1f6ff;color:var(--primary)}
+
+.contact-form{display:grid;gap:10px;max-width:700px}
+.contact-form input,.contact-form textarea,.contact-form select{padding:10px;border-radius:6px;border:1px solid #d7e2fa}
+.contact-form button{width:160px}
+
+/* Profile & figure */
+figure{margin:0}
+figure img{width:100%;border-radius:6px}
+
+.resource-hero{margin:12px 0 18px;border-radius:10px;overflow:hidden;box-shadow:0 12px 40px rgba(11,61,145,0.06)}
+.resource-hero img{width:100%;height:auto;object-fit:cover;display:block;aspect-ratio:16/6}
+.resource-hero figcaption{padding:10px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.6));font-weight:600}
+
+/* Wireframe small styles included inline in wireframe.html */
+
+/* Accessibility helpers */
+a:focus{outline:3px solid rgba(11,61,145,0.18);outline-offset:3px}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero-figure img{height:220px}
+  .promo{max-width:100%}
+  .hero-content h1{font-size:1.6rem}
+}
+
+/* Images gallery */
+.images-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:20px 0}
+.gallery-item{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(11,61,145,0.06);text-align:center}
+.gallery-item img{width:100%;height:auto;object-fit:cover;display:block;aspect-ratio:16/9}
+.gallery-item figcaption{padding:8px;color:var(--muted);font-weight:600}
+
+@media (max-width:520px){
+  .gallery-item img{height:120px}
+}
+
+/* Mobile improvements: better stacking, navbar, and gallery behavior */
+@media (max-width:760px){
+  .topnav{flex-wrap:wrap}
+  .topnav a:not(.icon){display:none}
+  .topnav a.icon{display:block;margin-left:auto;padding:8px 12px;background:transparent;border-radius:6px}
+  .topnav.responsive{position:relative}
+  .topnav.responsive a{display:block;text-align:left;width:100%;padding:12px 16px;background:transparent}
+  /* keep the hamburger separate and clickable without overlapping the first link */
+  .topnav.responsive a.icon{position:absolute;right:10px;top:10px;z-index:40;padding:8px}
+  /* remove the active link boxed background while the responsive menu is open */
+  .topnav.responsive a.active{background:transparent;color:#fff;font-weight:600}
+
+  .hero{grid-template-columns:1fr;gap:14px;padding:12px}
+  .hero-figure img{height:200px}
+  .hero-caption{left:12px;bottom:12px;font-size:0.95rem}
+  .hero-content{text-align:center}
+
+  .features{flex-direction:column}
+  .features article{width:100%}
+
+  .promo{margin:14px;padding:14px}
+
+  .contact-form button{width:100%}
+
+  .images-gallery{grid-template-columns:repeat(2,minmax(120px,1fr));gap:12px}
+  .images-gallery .gallery-item img{height:140px}
+
+  .courses-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:420px){
+  .images-gallery{grid-template-columns:1fr}
+  .images-gallery .gallery-item img{height:120px}
+  .hero-figure img{height:160px}
+  .site-header{padding:10px}
+  .logo{font-size:1rem}
+  .topnav a{padding:8px 10px}
+  .hero-content h1{font-size:1.3rem}
+  .features article h2{font-size:1.05rem}
+}

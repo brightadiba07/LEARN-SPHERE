@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses — LearnSphere</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">LearnSphere</div>
+    <nav class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html" class="active">Courses</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleNav()">☰</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Courses</h1>
+    <p>Explore our featured tracks and upcoming sessions.</p>
+
+    <section class="courses-grid">
+      <article>
+        <h2>Full-Stack Web Dev</h2>
+        <p>Start-to-finish web development with projects.</p>
+      </article>
+      <article>
+        <h2>Data Science</h2>
+        <p>Statistics, Python, and applied ML for real datasets.</p>
+      </article>
+      <article>
+        <h2>UX Design</h2>
+        <p>Human-centered design principles and prototyping.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Upcoming Schedule</h2>
+      <p>Below is a sample 4-week schedule for the Full-Stack track.</p>
+      <table class="schedule">
+        <caption>Full-Stack — 4-week Sample</caption>
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Topics</th>
+            <th>Live Session</th>
+            <th>Project</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>HTML, CSS, Accessibility</td>
+            <td>Wed 18:00</td>
+            <td>Landing page</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>JavaScript & DOM</td>
+            <td>Thu 18:00</td>
+            <td>Interactive UI</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Backend & APIs</td>
+            <td>Wed 19:00</td>
+            <td>Simple API</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Deploy & CI</td>
+            <td>Fri 17:00</td>
+            <td>Deployed site</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 LearnSphere</p>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>
